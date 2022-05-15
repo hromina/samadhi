@@ -11,14 +11,12 @@
 <h1>Регистрация</h1>
 <img src="/img/мкэ.png" align="left" width="300" height="200"> 
 <form action="check.php" method="post">
-<input type="text" class="form-control" name="логин"
-id="логин" placeholder="Введите логин"><br>
-<input type="пароль" class="form-control" name="пароль"
+<input type="text" class="form-control" name="login"
+id="login" placeholder="Введите логин"><br>
+<input type="text" class="form-control" name="name"
+id="name" placeholder="Введите имя"><br>
+<input type="password" class="form-control" name="pass"
 id="pass" placeholder="Введите пароль"><br>
-<input type="text" class="form-control" name="ФИО"
-id="ФИО" placeholder="Введите ФИО"><br>
-<input type="text" class="form-control" name="ФИО"
-id="email" placeholder="Введите e-mail"><br>
 <h3>Введите код с картинки:</h3>
 <br/>
  <img style="border: 1px solid gray; background: url('bg_capcha.png');" src = "captcha.php" width="120" height="40"/>

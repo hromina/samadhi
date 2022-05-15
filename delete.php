@@ -18,7 +18,7 @@ $id = $_GET['id'];
  * Делаем запрос на удаление строки из таблицы products
  */
 
-mysqli_query($connect, "DELETE FROM `authors` WHERE `authors`.`id` = '$id'");
+mysqli_query($connect, "DELETE FROM `ученые` WHERE `ученые`.`id` = '$id'");
 
 /*
  * Переадресация на главную страницу

@@ -86,5 +86,66 @@ require_once 'conn.php';
 		<input type="integer" name="рейтинг">
         <button type="submit">Добавить </button>
     </form>
+	<table border=1 style="position:absolute">
+        <tr>
+            <th>ID</th>
+            <th>ФИО</th>
+            <th>дата рождения</th>
+            <th>телефон</th>
+			<th>e-mail</th>
+			<th>образование</th>
+			<th>рейтинг</th>
+        </tr>
+		 <?php
+
+
+            $authors = mysqli_query($connect, "SELECT * FROM `authors`");
+
+            $authors = mysqli_fetch_all($authors);
+
+
+            foreach ($authors as $Ученые) 
+			{
+                ?>
+                    <tr>
+                        <td><?= $Ученые[0] ?></td>
+                        <td><?= $Ученые[1] ?></td>
+                        <td><?= $Ученые[3] ?></td>
+                        <td><?= $Ученые[2] ?></td>
+                        <td><a href="Ученые.php?id=<?= $Ученые[0] ?>">Смотреть</a></td>
+                        <td><a href="update.php?id=<?= $Ученые[0] ?>">Обновить</a></td>
+                        <td><a style="color: red;" href="delete.php?id=<?= $Ученые[0] ?>">Удалить</a></td>
+                    </tr>
+                <?php
+            }
+        ?>
+    </table>
+	
+    <h3>Добавить автора</h3>
+    <form action="create.php" method="post">
+        <p>ФИО</p>
+        <input type="varchar" name="ФИО">
+        <p>дата рождения</p>
+        <input type="date" name="дата рождения">
+        <p>телефон</p>
+        <input type="text" name="телефон">
+		<p>email</p>
+		<input type="varchar" name="email">
+        <p>образование</p>
+		<input type="text" name="образование">
+		<p>рейтинг</p>
+		<input type="integer" name="рейтинг">
+        <button type="submit">Добавить </button>
+    </form>
+	<table border=1 style="position:absolute">
+        <tr>
+            <th>ID</th>
+            <th>ФИО</th>
+            <th>дата рождения</th>
+            <th>телефон</th>
+			<th>e-mail</th>
+			<th>образование</th>
+			<th>рейтинг</th>
+        </tr>
 </body>
 </html>

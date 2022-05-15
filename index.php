@@ -35,7 +35,7 @@ body {
  <h3 class="mb-5">Статьи</h3>
  <form name="connect" action="rap.php" method="post">
 					<input type="hidden" name="script" value="conn.php">
-					<input type="submit" value="connect">
+					<input type="submit" value="Connect">
 					</form>
  <div class="content"><center><b><i>База данных</i></b><center>
 					<?php if (!(isset($_POST['script']))) 

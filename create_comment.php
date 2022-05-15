@@ -18,8 +18,7 @@ $body = $_POST['body'];
 /*
  * Делаем запрос на добавление новой строки в таблицу comments
  */
-mysqli_query($connect,"INSERT INTO `authors` (`id`, `ФИО`, `дата рождения`, `телефон`, `email`, `образование`, `рейтинг`) VALUES (NULL, '$ФИО', '$Достижения', '$Возраст')");
-mysqli_query($connect, "INSERT INTO `authors` (`id`, `authors`, `body`) VALUES (NULL, '$id', '$body')");
+mysqli_query($connect, "INSERT INTO `comments` (`id`, `Ученые_id`, `body`) VALUES (NULL, '$id', '$body')");
 
 /*
  * Переадресация на страницу /product.php?id=
